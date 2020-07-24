@@ -5,7 +5,7 @@ truffle environment for frax solidity smart contract testing
 ## initializing dev environment (assumming you don't already have truffle & ganache)
 1. required dependencies: node, npm
 
-2. install truffle: `$npm install -g truffle`
+2. install truffle: `npm install -g truffle`
 
 3. install ganache: https://www.trufflesuite.com/docs/ganache/quickstart
 
@@ -13,18 +13,18 @@ truffle environment for frax solidity smart contract testing
 
 1. compile contracts
    - compiling contracts in ./contracts: 
-      - `$truffle compile`
+      - `truffle compile`
     
 2. deploy contracts onto local instance of Ethereum (Ganache)
    - to run 2_deploy_contracts.js in frax-truffle/migrations:
-      - `$truffle migrate`
-      - `$truffle migrate --reset` (this re-deploys the contracts if they're already deployed)
+      - `truffle migrate`
+      - `truffle migrate --reset` (this re-deploys the contracts if they're already deployed)
 
 3. run test scripts
    - to run all of the test scripts in ./test:
-      - `$truffle test`
+      - `truffle test`
    - to run a specific test script:
-      - `$truffle test ./specific-test-script.js`
+      - `truffle test ./specific-test-script.js`
   
   
 ## config
