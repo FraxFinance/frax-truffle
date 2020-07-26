@@ -13,10 +13,15 @@ contract('tether', function(accounts) {
 
   it("returns the tether balance of account[0]", function() {
     return tether.deployed().then(function(deployed) {
-      console.log('tether balance of accounts[0]: ');
-      deployed.balanceOf(accounts[0]).then(balanceOfOutput => console.log(balanceOfOutput.words[0]));
+      deployed.balanceOf(accounts[0]).then(balanceOfOutput => console.log('tether balance of accounts[0]: ' + balanceOfOutput.words[0]));
 
       return deployed.balanceOf(accounts[0]).then(balanceOfOutput => balanceOfOutput.words[0]);
+    });
+  });
+
+  it("approves 1000 tether to the frax_pool contract", function() {
+    return tether.deployed().then(function(deployed) {
+      return deployed.approve(frax_pool.address, 1000);
     });
   });
 
@@ -45,6 +50,12 @@ contract('FRAXStablecoin', function(accounts) {
     return frax.deployed().then(function(deployed){ 
       console.log("FRAX price: $1.000000, FXS price: $2.000000");
       return deployed.setPrices(1000000, 2000000);
+    });
+  });
+
+  it("sets the global collateral ratio to 0.5", function() {
+    return frax.deployed().then(function(deployed) {
+      return deployed.setGlobalCollateralRatio(500000);
     });
   });
 
@@ -93,7 +104,7 @@ contract('frax_pool', function(accounts) {
 
   it("sets the pool ceiling to 100,000 FRAX", function(){ 
     return frax_pool.deployed().then(function (deployed){
-      return deployed.setPoolCeiling(100000000000);
+      return deployed.setPoolCeiling(100000);
     });
   });
 
@@ -103,7 +114,21 @@ contract('frax_pool', function(accounts) {
     });
   });
 
+  it("mints 500 FRAX at 50% collateral ratio (from above), using mintFrax", function(){
+    return frax_pool.deployed().then(function (deployed) {
+      return deployed.mintFrax(500, 500);
+    });
+  });
 
 });
 
 
+contract('FRAXStablecoin', function(accounts) {
+  it("has a balance of 500 FRAX", function(){ 
+    return frax.deployed().then(function (deployed) {
+
+      return assert(deployed.balanceOf(accounts[0]), 500, "account[0] balance is not 500 FRAX");;
+    });
+  });
+
+});
