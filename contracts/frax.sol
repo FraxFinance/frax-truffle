@@ -307,6 +307,7 @@ contract FRAXStablecoin is ERC20 {
     uint256 phase2_startTime; //epoch time of phase 2 start, fractional phase 
     uint256 last_hop_time; //epoch time of last FRAX expansion
     uint256 public FRAX_price; //6 decimals of precision
+    uint256 public FRAX_supply; //6 decimals of precision
     uint256 public FXS_price; //6 decimals of precision
     uint256 public global_collateral_ratio; //6 decimals of precision, e.g. 924102 = 0.924102
     address oracle_address; //this is the address that can change the FRAX and FXS price
@@ -362,7 +363,7 @@ contract FRAXStablecoin is ERC20 {
         frax_monetary_policy_contracts[con_address] = true; 
     }
 
-
+    event storeFRAXPrice(uint256 current_FRAX_supply);
 
     // the updated price must be within 10% of the old price
     // this is to prevent accidental mispricings 
@@ -371,6 +372,8 @@ contract FRAXStablecoin is ERC20 {
     function setPrices(uint256 FRAX_p,uint256 FXS_p) public onlyByOracle {
         FRAX_price = FRAX_p;
         FXS_price = FXS_p;
+
+        emit storeFRAXPrice(FRAX_supply);
     }
     
     function setGlobalCollateralRatio(uint256 coll_ra) public onlyByOracle {

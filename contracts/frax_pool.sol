@@ -51,6 +51,10 @@ contract frax_pool {
         collateral_price_int = c_price;
     }
     
+    function mintFrax1t1(uint256 collateral_amount) public payable {
+        collateral_token.transferFrom(msg.sender, address(this), collateral_amount);
+        FRAX.pool_mint(msg.sender, collateral_amount);
+    }
 
     
     function mintFrax(uint256 collateral_amount, uint256 FXS_amount) public payable {

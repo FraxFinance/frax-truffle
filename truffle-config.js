@@ -1,6 +1,7 @@
 const path = require("path");
 var HDWalletProvider = require('truffle-hdwallet-provider');
-var infuraApiKey = 'https://ropsten.infura.io/v3/0a5b1633380b415d9b7342823baad798'
+var infuraApiKey = 'v3/0a5b1633380b415d9b7342823baad798'
+var mnemonic = "now that ice cream choose shuffle sand sport end stuff tone word";
 
 module.exports = {
   // See <http://truffleframework.com/docs/advanced/configuration>
