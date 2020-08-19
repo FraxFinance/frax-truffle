@@ -10315,12 +10315,12 @@
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xAB11ae65f4e2E314Ed7d1560fA7a4039f1b6f8E1",
-      "transactionHash": "0xf9a9265e9352123c9d1a0d26a76e3860b6d50c6322ff834660a1f02a6be86550"
+      "address": "0x7A8C69550C125a9FAFe7B63Cf7c2097cE31ce535",
+      "transactionHash": "0x525a26e42439a058bc97f86879fea6e9222946e17cf1f5a862bd615a2ac42af7"
     }
   },
-  "schemaVersion": "3.2.2",
-  "updatedAt": "2020-08-16T21:45:12.875Z",
+  "schemaVersion": "3.2.3",
+  "updatedAt": "2020-08-19T06:44:53.433Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}

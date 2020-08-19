@@ -75,7 +75,7 @@
         "id": 1172,
         "nodeType": "ImportDirective",
         "scope": 1400,
-        "sourceUnit": 2400,
+        "sourceUnit": 2426,
         "src": "50:19:5",
         "symbolAliases": [],
         "unitAlias": ""
@@ -232,7 +232,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_FRAXShares_$2399",
+              "typeIdentifier": "t_contract$_FRAXShares_$2425",
               "typeString": "contract FRAXShares"
             },
             "typeName": {
@@ -240,10 +240,10 @@
               "id": 1182,
               "name": "FRAXShares",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2399,
+              "referencedDeclaration": 2425,
               "src": "517:10:5",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_FRAXShares_$2399",
+                "typeIdentifier": "t_contract$_FRAXShares_$2425",
                 "typeString": "contract FRAXShares"
               }
             },
@@ -275,10 +275,10 @@
                 "name": "FRAXShares",
                 "nodeType": "Identifier",
                 "overloadedDeclarations": [],
-                "referencedDeclaration": 2399,
+                "referencedDeclaration": 2425,
                 "src": "534:10:5",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_type$_t_contract$_FRAXShares_$2399_$",
+                  "typeIdentifier": "t_type$_t_contract$_FRAXShares_$2425_$",
                   "typeString": "type(contract FRAXShares)"
                 }
               },
@@ -293,7 +293,7 @@
               "src": "534:23:5",
               "tryCall": false,
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_FRAXShares_$2399",
+                "typeIdentifier": "t_contract$_FRAXShares_$2425",
                 "typeString": "contract FRAXShares"
               }
             },
@@ -886,7 +886,7 @@
                               "referencedDeclaration": 1186,
                               "src": "976:3:5",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_FRAXShares_$2399",
+                                "typeIdentifier": "t_contract$_FRAXShares_$2425",
                                 "typeString": "contract FRAXShares"
                               }
                             },
@@ -897,7 +897,7 @@
                             "lValueRequested": false,
                             "memberName": "burn",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 2197,
+                            "referencedDeclaration": 2223,
                             "src": "976:8:5",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$returns$__$",
@@ -1837,7 +1837,7 @@
                               "referencedDeclaration": 1186,
                               "src": "1631:3:5",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_FRAXShares_$2399",
+                                "typeIdentifier": "t_contract$_FRAXShares_$2425",
                                 "typeString": "contract FRAXShares"
                               }
                             },
@@ -1848,7 +1848,7 @@
                             "lValueRequested": false,
                             "memberName": "transfer",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 1828,
+                            "referencedDeclaration": 1854,
                             "src": "1631:12:5",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
@@ -2071,7 +2071,7 @@
                         "referencedDeclaration": 1186,
                         "src": "1757:3:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_FRAXShares_$2399",
+                          "typeIdentifier": "t_contract$_FRAXShares_$2425",
                           "typeString": "contract FRAXShares"
                         }
                       },
@@ -2082,7 +2082,7 @@
                       "lValueRequested": false,
                       "memberName": "transferFrom",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1905,
+                      "referencedDeclaration": 1931,
                       "src": "1757:16:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$_t_bool_$",
@@ -2587,7 +2587,7 @@
                               "referencedDeclaration": 1186,
                               "src": "2170:3:5",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_FRAXShares_$2399",
+                                "typeIdentifier": "t_contract$_FRAXShares_$2425",
                                 "typeString": "contract FRAXShares"
                               }
                             },
@@ -2598,7 +2598,7 @@
                             "lValueRequested": false,
                             "memberName": "mint",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 2355,
+                            "referencedDeclaration": 2381,
                             "src": "2170:8:5",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$__$",
@@ -3281,7 +3281,7 @@
         "id": 1172,
         "nodeType": "ImportDirective",
         "scope": 1400,
-        "sourceUnit": 2400,
+        "sourceUnit": 2426,
         "src": "50:19:5",
         "symbolAliases": [],
         "unitAlias": ""
@@ -3438,7 +3438,7 @@
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
-              "typeIdentifier": "t_contract$_FRAXShares_$2399",
+              "typeIdentifier": "t_contract$_FRAXShares_$2425",
               "typeString": "contract FRAXShares"
             },
             "typeName": {
@@ -3446,10 +3446,10 @@
               "id": 1182,
               "name": "FRAXShares",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 2399,
+              "referencedDeclaration": 2425,
               "src": "517:10:5",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_FRAXShares_$2399",
+                "typeIdentifier": "t_contract$_FRAXShares_$2425",
                 "typeString": "contract FRAXShares"
               }
             },
@@ -3481,10 +3481,10 @@
                 "name": "FRAXShares",
                 "nodeType": "Identifier",
                 "overloadedDeclarations": [],
-                "referencedDeclaration": 2399,
+                "referencedDeclaration": 2425,
                 "src": "534:10:5",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_type$_t_contract$_FRAXShares_$2399_$",
+                  "typeIdentifier": "t_type$_t_contract$_FRAXShares_$2425_$",
                   "typeString": "type(contract FRAXShares)"
                 }
               },
@@ -3499,7 +3499,7 @@
               "src": "534:23:5",
               "tryCall": false,
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_FRAXShares_$2399",
+                "typeIdentifier": "t_contract$_FRAXShares_$2425",
                 "typeString": "contract FRAXShares"
               }
             },
@@ -4092,7 +4092,7 @@
                               "referencedDeclaration": 1186,
                               "src": "976:3:5",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_FRAXShares_$2399",
+                                "typeIdentifier": "t_contract$_FRAXShares_$2425",
                                 "typeString": "contract FRAXShares"
                               }
                             },
@@ -4103,7 +4103,7 @@
                             "lValueRequested": false,
                             "memberName": "burn",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 2197,
+                            "referencedDeclaration": 2223,
                             "src": "976:8:5",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$returns$__$",
@@ -5043,7 +5043,7 @@
                               "referencedDeclaration": 1186,
                               "src": "1631:3:5",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_FRAXShares_$2399",
+                                "typeIdentifier": "t_contract$_FRAXShares_$2425",
                                 "typeString": "contract FRAXShares"
                               }
                             },
@@ -5054,7 +5054,7 @@
                             "lValueRequested": false,
                             "memberName": "transfer",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 1828,
+                            "referencedDeclaration": 1854,
                             "src": "1631:12:5",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
@@ -5277,7 +5277,7 @@
                         "referencedDeclaration": 1186,
                         "src": "1757:3:5",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_contract$_FRAXShares_$2399",
+                          "typeIdentifier": "t_contract$_FRAXShares_$2425",
                           "typeString": "contract FRAXShares"
                         }
                       },
@@ -5288,7 +5288,7 @@
                       "lValueRequested": false,
                       "memberName": "transferFrom",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": 1905,
+                      "referencedDeclaration": 1931,
                       "src": "1757:16:5",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_address_$_t_uint256_$returns$_t_bool_$",
@@ -5793,7 +5793,7 @@
                               "referencedDeclaration": 1186,
                               "src": "2170:3:5",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_contract$_FRAXShares_$2399",
+                                "typeIdentifier": "t_contract$_FRAXShares_$2425",
                                 "typeString": "contract FRAXShares"
                               }
                             },
@@ -5804,7 +5804,7 @@
                             "lValueRequested": false,
                             "memberName": "mint",
                             "nodeType": "MemberAccess",
-                            "referencedDeclaration": 2355,
+                            "referencedDeclaration": 2381,
                             "src": "2170:8:5",
                             "typeDescriptions": {
                               "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$__$",
@@ -6454,8 +6454,8 @@
     "version": "0.6.6+commit.6c089d02.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.2.2",
-  "updatedAt": "2020-08-16T07:21:23.955Z",
+  "schemaVersion": "3.2.3",
+  "updatedAt": "2020-08-19T06:44:51.077Z",
   "devdoc": {
     "methods": {}
   },

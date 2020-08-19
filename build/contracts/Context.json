@@ -600,8 +600,8 @@
     "version": "0.6.6+commit.6c089d02.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.2.2",
-  "updatedAt": "2020-08-16T21:45:12.758Z",
+  "schemaVersion": "3.2.3",
+  "updatedAt": "2020-08-19T06:44:53.393Z",
   "networkType": "ethereum",
   "devdoc": {
     "methods": {}
