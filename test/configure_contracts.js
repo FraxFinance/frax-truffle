@@ -19,9 +19,9 @@ contract('tether', function(accounts) {
     });
   });
 
-  it("approves 1000 tether to the frax_pool contract", function() {
+  it("approves 10,000,000 tether to the frax_pool contract", function() {
     return tether.deployed().then(function(deployed) {
-      return deployed.approve(frax_pool.address, 1000);
+      return deployed.approve(frax_pool.address, 10000000);
     });
   });
 
@@ -46,16 +46,16 @@ contract('FRAXStablecoin', function(accounts) {
     });
   });
 
-  it("sets the prices of FRAX to $1 and FXS to $2", function(){ 
+  it("sets the prices of FRAX to $1.01 and FXS to $2.00", function(){ 
     return frax.deployed().then(function(deployed){ 
-      console.log("FRAX price: $1.000000, FXS price: $2.000000");
-      return deployed.setPrices(1000000, 2000000);
+      console.log("FRAX price: $1.01, FXS price: $2.00");
+      return deployed.setPrices(1010000, 2000000);
     });
   });
 
-  it("sets the global collateral ratio to 0.5", function() {
+  it("sets the global collateral ratio to 1.000000", function() {
     return frax.deployed().then(function(deployed) {
-      return deployed.setGlobalCollateralRatio(500000);
+      return deployed.setGlobalCollateralRatio(1000000);
     });
   });
 
@@ -72,6 +72,7 @@ contract('FRAXShares', function(accounts) {
       return deployed.balanceOf(accounts[0]).then(balanceOfOutput => console.log(balanceOfOutput.toNumber()));
     });
   });
+
   /* only use if setNewPool is a function in fxs.sol
   it("sets frax_pool as a pool address using setNewPool", function(){ 
     return fxs.deployed().then(function(deployed) {
@@ -80,6 +81,12 @@ contract('FRAXShares', function(accounts) {
     });
   });
   */
+
+  it("sets minimum FXS balance required to join DAO to 10,000 FXS", function(){ 
+    return fxs.deployed().then(function(deployed) {
+      return deployed.setFXSMinDAO(10000);
+    });
+  });
 
 });
 
@@ -114,9 +121,9 @@ contract('frax_pool', function(accounts) {
     });
   });
 
-  it("mints 500 FRAX at 50% collateral ratio (from above), using mintFrax", function(){
+  it("mints 500 FRAX at 1t1 using mint1t1Frax", function(){
     return frax_pool.deployed().then(function (deployed) {
-      return deployed.mintFrax(500, 500);
+      return deployed.mint1t1FRAX(500);
     });
   });
 
@@ -126,8 +133,19 @@ contract('frax_pool', function(accounts) {
 contract('FRAXStablecoin', function(accounts) {
   it("has a balance of 500 FRAX", function(){ 
     return frax.deployed().then(function (deployed) {
-
       return assert(deployed.balanceOf(accounts[0]), 500, "account[0] balance is not 500 FRAX");;
+    });
+  });
+
+  it("triggers the collateral ratio by a step using setNewCollateralRatio", function() {
+    return frax.deployed().then(function(deployed) {
+      return deployed.setNewCollateralRatio();
+    });
+  });
+
+  it("returns the globalCollateralValue()", function() {
+    return frax.deployed().then(function(deployed) {
+      return deployed.globalCollateralValue();
     });
   });
 

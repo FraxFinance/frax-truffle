@@ -114,7 +114,7 @@ contract FRAXStablecoin is ERC20 {
     //there needs to be a time interval that this can be called. Otherwise it can be called multiple times per expansion.
     uint256 last_call_time; //last time the setNewCollateralRatio function was called
     function setNewCollateralRatio() public {
-        require(block.timestamp - last_call_time >= 3600 && FRAX_price != 1000000);  //3600 seconds means can be called once per hour, 86400 seconds is per day, callable only if FRAX price is not $1
+        //require(block.timestamp - last_call_time >= 3600 && FRAX_price != 1000000);  //3600 seconds means can be called once per hour, 86400 seconds is per day, callable only if FRAX price is not $1
         
         uint256 tot_collat_value =  globalCollateralValue();
         uint256 globalC_ratio = totalSupply().div(tot_collat_value); //div by 12 places, FRAX has 18 precision and c_ratio has 6              
