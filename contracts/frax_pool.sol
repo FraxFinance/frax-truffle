@@ -48,6 +48,10 @@ contract frax_pool {
         FRAX = FRAXStablecoin(frax_contract_address);
     }
     
+    function setFXSAddress(address fxs_contract_address) public onlyByOracle {
+        FXS = FRAXShares(fxs_contract_address);
+    }
+    
     function setPrice(uint256 c_price) public onlyByOracle {
         collateral_price_int = c_price;
     }

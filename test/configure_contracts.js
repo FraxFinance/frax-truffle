@@ -73,14 +73,12 @@ contract('FRAXShares', function(accounts) {
     });
   });
 
-  /* only use if setNewPool is a function in fxs.sol
-  it("sets frax_pool as a pool address using setNewPool", function(){ 
-    return fxs.deployed().then(function(deployed) {
-      console.log('frax_pool address: ' + frax_pool.address);
-      return deployed.setNewPool(frax_pool.address);
+  it("sets the FRAX address to the FRAX contract address", function(){ 
+    return fxs.deployed().then(function (deployed){
+      console.log('FRAX contract address: ' + frax.address);
+      return deployed.setFRAXAddress(frax.address);
     });
   });
-  */
 
   it("sets minimum FXS balance required to join DAO to 10,000 FXS", function(){ 
     return fxs.deployed().then(function(deployed) {
@@ -93,7 +91,6 @@ contract('FRAXShares', function(accounts) {
 
 
 
-//
 contract('frax_pool', function(accounts) {
   it("sets the collateral address to the tether contract address", function(){
     return frax_pool.deployed().then(function (deployed){ 
@@ -109,6 +106,13 @@ contract('frax_pool', function(accounts) {
     });
   });
 
+  it("sets the FXS address to the FXS contract address", function(){ 
+    return frax_pool.deployed().then(function (deployed){
+      console.log('FXS contract address: ' + fxs.address);
+      return deployed.setFXSAddress(fxs.address);
+    });
+  });
+
   it("sets the pool ceiling to 100,000 FRAX", function(){ 
     return frax_pool.deployed().then(function (deployed){
       return deployed.setPoolCeiling(100000);
@@ -121,9 +125,9 @@ contract('frax_pool', function(accounts) {
     });
   });
 
-  it("mints 500 FRAX at 1t1 using mint1t1Frax", function(){
+  it("mints 2 FRAX at 1t1 using mint1t1Frax", function(){
     return frax_pool.deployed().then(function (deployed) {
-      return deployed.mint1t1FRAX(500);
+      return deployed.mint1t1FRAX(2);
     });
   });
 
