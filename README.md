@@ -7,7 +7,7 @@ truffle environment for frax solidity smart contract testing
 
 2. `npm install`
 
-3. install ganache: https://www.trufflesuite.com/docs/ganache/quickstart
+3. install ganache: https://www.trufflesuite.com/docs/ganache/quickstart and start it
 
 ## testing the contracts
 
@@ -28,7 +28,7 @@ truffle environment for frax solidity smart contract testing
   
   
 ## config
-truffle uses the version of the solidity compiler as specified in ./truffle-config.js (currently set to 0.6.6).
+truffle uses the version of the solidity compiler as specified in ./truffle-config.js
 
 truffle will deploy to the port specified in ./truffle-config.js (currently set to port 7545, which is also default for Ganache). if you
 set a different port in ganache, make sure to update this config file.
