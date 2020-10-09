@@ -5,7 +5,7 @@ truffle environment for frax solidity smart contract testing
 ## initializing dev environment (assumming you don't already have truffle & ganache)
 1. required dependencies: node, npm
 
-2. install truffle: `npm install -g truffle`
+2. `npm install`
 
 3. install ganache: https://www.trufflesuite.com/docs/ganache/quickstart
 
