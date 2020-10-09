@@ -1,28 +1,33 @@
-const path = require("path");
-var HDWalletProvider = require('truffle-hdwallet-provider');
-var infuraApiKey = 'v3/0a5b1633380b415d9b7342823baad798'
-var mnemonic = "now that ice cream choose shuffle sand sport end stuff tone word";
-
 module.exports = {
-  // See <http://truffleframework.com/docs/advanced/configuration>
-  // to customize your Truffle configuration!
-  networks: {
-    development: {
-      host: "127.0.0.1",
-      port: 8546,
-      network_id: '5777'
-    },
-    ropsten: {
-      provider: function() {
-        return new HDWalletProvider(mnemonic, 'https://ropsten.infura.io/' + infuraApiKey);
-      },
-      network_id: 3,
-      gas: 4612388
-    }
-  },
-  compilers: {
-  	solc: {
-  		version: '0.6.6'
-  	}
-  }
+	// Uncommenting the defaults below 
+	// provides for an easier quick-start with Ganache.
+	// You can also follow this format for other networks;
+	// see <http://truffleframework.com/docs/advanced/configuration>
+	// for more details on how to specify configuration options!
+	//
+	networks: {
+		development: {
+			host: "127.0.0.1",
+			port: 7545,
+			network_id: "*",
+			// gas: 0x1ffffffffffffe
+		},
+		ropsten: {
+			url: "wss://ropsten.infura.io/ws/v3/0a5b1633380b415d9b7342823baad798",
+			network_id: "3",
+		}
+	},
+	compilers: {
+		solc: {
+			version: "0.6.12",
+			optimizer: {
+				enabled: true,
+				runs: 100000
+			}
+		}
+	},
+	mocha: {
+		useColors: true
+	},
+	plugins: ["truffle-contract-size"]
 };
