@@ -21,10 +21,10 @@ truffle environment for frax solidity smart contract testing
       - `truffle migrate --reset` (this re-deploys the contracts if they're already deployed)
 
 3. run test scripts
-   - to run all of the test scripts in ./test:
-      - `truffle test`
+   - to run the complete test script:
+      - `truffle test test/Frax-Tests.js`
    - to run a specific test script:
-      - `truffle test ./specific-test-script.js`
+      - `truffle test test/specific-test-script.js`
   
   
 ## config
